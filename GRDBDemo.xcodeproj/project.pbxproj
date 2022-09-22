@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEDEDDDE28DBEBA3006F1136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDDDD28DBEBA3006F1136 /* AppDelegate.swift */; };
+		CEDEDDE028DBEBA3006F1136 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDDDF28DBEBA3006F1136 /* SceneDelegate.swift */; };
+		CEDEDDE528DBEBA3006F1136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDEDDE328DBEBA3006F1136 /* Main.storyboard */; };
+		CEDEDDE728DBEBA4006F1136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDEDDE628DBEBA4006F1136 /* Assets.xcassets */; };
+		CEDEDDEA28DBEBA4006F1136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDEDDE828DBEBA4006F1136 /* LaunchScreen.storyboard */; };
+		CEDEDDF528DBEBA4006F1136 /* GRDBDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDDF428DBEBA4006F1136 /* GRDBDemoTests.swift */; };
+		CEDEDDFF28DBEBA4006F1136 /* GRDBDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDDFE28DBEBA4006F1136 /* GRDBDemoUITests.swift */; };
+		CEDEDE0128DBEBA4006F1136 /* GRDBDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDE0028DBEBA4006F1136 /* GRDBDemoUITestsLaunchTests.swift */; };
+		CEDEDE0F28DBEBEB006F1136 /* RxGRDB in Frameworks */ = {isa = PBXBuildFile; productRef = CEDEDE0E28DBEBEB006F1136 /* RxGRDB */; };
+		CEDEDE1628DBEC4B006F1136 /* Database+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDE1128DBEC4B006F1136 /* Database+Table.swift */; };
+		CEDEDE1728DBEC4B006F1136 /* GRDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDE1228DBEC4B006F1136 /* GRDBManager.swift */; };
+		CEDEDE1828DBEC4B006F1136 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDE1428DBEC4B006F1136 /* Entity.swift */; };
+		CEDEDE1928DBEC4B006F1136 /* Entitys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDE1528DBEC4B006F1136 /* Entitys.swift */; };
+		CEDEDE1A28DBECB4006F1136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDEDDE128DBEBA3006F1136 /* ViewController.swift */; };
+		CEDEDE1D28DBED1F006F1136 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CEDEDE1C28DBED1F006F1136 /* RxCocoa */; };
+		CEDEDE1F28DBED1F006F1136 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = CEDEDE1E28DBED1F006F1136 /* RxRelay */; };
+		CEDEDE2128DBED1F006F1136 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEDEDE2028DBED1F006F1136 /* RxSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEDEDDF128DBEBA4006F1136 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDEDDD228DBEBA3006F1136 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDEDDD928DBEBA3006F1136;
+			remoteInfo = GRDBDemo;
+		};
+		CEDEDDFB28DBEBA4006F1136 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDEDDD228DBEBA3006F1136 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDEDDD928DBEBA3006F1136;
+			remoteInfo = GRDBDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEDEDDDA28DBEBA3006F1136 /* GRDBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GRDBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDEDDDD28DBEBA3006F1136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEDEDDDF28DBEBA3006F1136 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CEDEDDE128DBEBA3006F1136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEDEDDE428DBEBA3006F1136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEDEDDE628DBEBA4006F1136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDEDDE928DBEBA4006F1136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEDEDDEB28DBEBA4006F1136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDEDDF028DBEBA4006F1136 /* GRDBDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRDBDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDEDDF428DBEBA4006F1136 /* GRDBDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRDBDemoTests.swift; sourceTree = "<group>"; };
+		CEDEDDFA28DBEBA4006F1136 /* GRDBDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRDBDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDEDDFE28DBEBA4006F1136 /* GRDBDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRDBDemoUITests.swift; sourceTree = "<group>"; };
+		CEDEDE0028DBEBA4006F1136 /* GRDBDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRDBDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEDEDE1128DBEC4B006F1136 /* Database+Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Database+Table.swift"; sourceTree = "<group>"; };
+		CEDEDE1228DBEC4B006F1136 /* GRDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GRDBManager.swift; sourceTree = "<group>"; };
+		CEDEDE1428DBEC4B006F1136 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		CEDEDE1528DBEC4B006F1136 /* Entitys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entitys.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDEDDD728DBEBA3006F1136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDEDE1F28DBED1F006F1136 /* RxRelay in Frameworks */,
+				CEDEDE1D28DBED1F006F1136 /* RxCocoa in Frameworks */,
+				CEDEDE2128DBED1F006F1136 /* RxSwift in Frameworks */,
+				CEDEDE0F28DBEBEB006F1136 /* RxGRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDEDDED28DBEBA4006F1136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDEDDF728DBEBA4006F1136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEDEDDD128DBEBA3006F1136 = {
+			isa = PBXGroup;
+			children = (
+				CEDEDDDC28DBEBA3006F1136 /* GRDBDemo */,
+				CEDEDDF328DBEBA4006F1136 /* GRDBDemoTests */,
+				CEDEDDFD28DBEBA4006F1136 /* GRDBDemoUITests */,
+				CEDEDDDB28DBEBA3006F1136 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDEDDDB28DBEBA3006F1136 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEDDDA28DBEBA3006F1136 /* GRDBDemo.app */,
+				CEDEDDF028DBEBA4006F1136 /* GRDBDemoTests.xctest */,
+				CEDEDDFA28DBEBA4006F1136 /* GRDBDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDEDDDC28DBEBA3006F1136 /* GRDBDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEDDDD28DBEBA3006F1136 /* AppDelegate.swift */,
+				CEDEDDDF28DBEBA3006F1136 /* SceneDelegate.swift */,
+				CEDEDDE128DBEBA3006F1136 /* ViewController.swift */,
+				CEDEDE1028DBEC4B006F1136 /* GRDB */,
+				CEDEDDE328DBEBA3006F1136 /* Main.storyboard */,
+				CEDEDDE628DBEBA4006F1136 /* Assets.xcassets */,
+				CEDEDDE828DBEBA4006F1136 /* LaunchScreen.storyboard */,
+				CEDEDDEB28DBEBA4006F1136 /* Info.plist */,
+			);
+			path = GRDBDemo;
+			sourceTree = "<group>";
+		};
+		CEDEDDF328DBEBA4006F1136 /* GRDBDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEDDF428DBEBA4006F1136 /* GRDBDemoTests.swift */,
+			);
+			path = GRDBDemoTests;
+			sourceTree = "<group>";
+		};
+		CEDEDDFD28DBEBA4006F1136 /* GRDBDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEDDFE28DBEBA4006F1136 /* GRDBDemoUITests.swift */,
+				CEDEDE0028DBEBA4006F1136 /* GRDBDemoUITestsLaunchTests.swift */,
+			);
+			path = GRDBDemoUITests;
+			sourceTree = "<group>";
+		};
+		CEDEDE1028DBEC4B006F1136 /* GRDB */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEDE1128DBEC4B006F1136 /* Database+Table.swift */,
+				CEDEDE1228DBEC4B006F1136 /* GRDBManager.swift */,
+				CEDEDE1328DBEC4B006F1136 /* Data */,
+			);
+			path = GRDB;
+			sourceTree = "<group>";
+		};
+		CEDEDE1328DBEC4B006F1136 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEDE1428DBEC4B006F1136 /* Entity.swift */,
+				CEDEDE1528DBEC4B006F1136 /* Entitys.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDEDDD928DBEBA3006F1136 /* GRDBDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDEDE0428DBEBA4006F1136 /* Build configuration list for PBXNativeTarget "GRDBDemo" */;
+			buildPhases = (
+				CEDEDDD628DBEBA3006F1136 /* Sources */,
+				CEDEDDD728DBEBA3006F1136 /* Frameworks */,
+				CEDEDDD828DBEBA3006F1136 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GRDBDemo;
+			packageProductDependencies = (
+				CEDEDE0E28DBEBEB006F1136 /* RxGRDB */,
+				CEDEDE1C28DBED1F006F1136 /* RxCocoa */,
+				CEDEDE1E28DBED1F006F1136 /* RxRelay */,
+				CEDEDE2028DBED1F006F1136 /* RxSwift */,
+			);
+			productName = GRDBDemo;
+			productReference = CEDEDDDA28DBEBA3006F1136 /* GRDBDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEDEDDEF28DBEBA4006F1136 /* GRDBDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDEDE0728DBEBA4006F1136 /* Build configuration list for PBXNativeTarget "GRDBDemoTests" */;
+			buildPhases = (
+				CEDEDDEC28DBEBA4006F1136 /* Sources */,
+				CEDEDDED28DBEBA4006F1136 /* Frameworks */,
+				CEDEDDEE28DBEBA4006F1136 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDEDDF228DBEBA4006F1136 /* PBXTargetDependency */,
+			);
+			name = GRDBDemoTests;
+			productName = GRDBDemoTests;
+			productReference = CEDEDDF028DBEBA4006F1136 /* GRDBDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEDEDDF928DBEBA4006F1136 /* GRDBDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDEDE0A28DBEBA4006F1136 /* Build configuration list for PBXNativeTarget "GRDBDemoUITests" */;
+			buildPhases = (
+				CEDEDDF628DBEBA4006F1136 /* Sources */,
+				CEDEDDF728DBEBA4006F1136 /* Frameworks */,
+				CEDEDDF828DBEBA4006F1136 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDEDDFC28DBEBA4006F1136 /* PBXTargetDependency */,
+			);
+			name = GRDBDemoUITests;
+			productName = GRDBDemoUITests;
+			productReference = CEDEDDFA28DBEBA4006F1136 /* GRDBDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDEDDD228DBEBA3006F1136 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CEDEDDD928DBEBA3006F1136 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CEDEDDEF28DBEBA4006F1136 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = CEDEDDD928DBEBA3006F1136;
+					};
+					CEDEDDF928DBEBA4006F1136 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = CEDEDDD928DBEBA3006F1136;
+					};
+				};
+			};
+			buildConfigurationList = CEDEDDD528DBEBA3006F1136 /* Build configuration list for PBXProject "GRDBDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEDEDDD128DBEBA3006F1136;
+			packageReferences = (
+				CEDEDE0D28DBEBEB006F1136 /* XCRemoteSwiftPackageReference "RxGRDB" */,
+				CEDEDE1B28DBED1F006F1136 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = CEDEDDDB28DBEBA3006F1136 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDEDDD928DBEBA3006F1136 /* GRDBDemo */,
+				CEDEDDEF28DBEBA4006F1136 /* GRDBDemoTests */,
+				CEDEDDF928DBEBA4006F1136 /* GRDBDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDEDDD828DBEBA3006F1136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDEDDEA28DBEBA4006F1136 /* LaunchScreen.storyboard in Resources */,
+				CEDEDDE728DBEBA4006F1136 /* Assets.xcassets in Resources */,
+				CEDEDDE528DBEBA3006F1136 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDEDDEE28DBEBA4006F1136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDEDDF828DBEBA4006F1136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDEDDD628DBEBA3006F1136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDEDE1728DBEC4B006F1136 /* GRDBManager.swift in Sources */,
+				CEDEDE1828DBEC4B006F1136 /* Entity.swift in Sources */,
+				CEDEDDDE28DBEBA3006F1136 /* AppDelegate.swift in Sources */,
+				CEDEDDE028DBEBA3006F1136 /* SceneDelegate.swift in Sources */,
+				CEDEDE1A28DBECB4006F1136 /* ViewController.swift in Sources */,
+				CEDEDE1928DBEC4B006F1136 /* Entitys.swift in Sources */,
+				CEDEDE1628DBEC4B006F1136 /* Database+Table.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDEDDEC28DBEBA4006F1136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDEDDF528DBEBA4006F1136 /* GRDBDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDEDDF628DBEBA4006F1136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDEDE0128DBEBA4006F1136 /* GRDBDemoUITestsLaunchTests.swift in Sources */,
+				CEDEDDFF28DBEBA4006F1136 /* GRDBDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEDEDDF228DBEBA4006F1136 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDEDDD928DBEBA3006F1136 /* GRDBDemo */;
+			targetProxy = CEDEDDF128DBEBA4006F1136 /* PBXContainerItemProxy */;
+		};
+		CEDEDDFC28DBEBA4006F1136 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDEDDD928DBEBA3006F1136 /* GRDBDemo */;
+			targetProxy = CEDEDDFB28DBEBA4006F1136 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEDEDDE328DBEBA3006F1136 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDEDDE428DBEBA3006F1136 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEDEDDE828DBEBA4006F1136 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEDEDDE928DBEBA4006F1136 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEDEDE0228DBEBA4006F1136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEDEDE0328DBEBA4006F1136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDEDE0528DBEBA4006F1136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH4AS5QT2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GRDBDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GRDBDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEDEDE0628DBEBA4006F1136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH4AS5QT2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GRDBDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GRDBDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEDEDE0828DBEBA4006F1136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH4AS5QT2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GRDBDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRDBDemo.app/GRDBDemo";
+			};
+			name = Debug;
+		};
+		CEDEDE0928DBEBA4006F1136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH4AS5QT2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GRDBDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRDBDemo.app/GRDBDemo";
+			};
+			name = Release;
+		};
+		CEDEDE0B28DBEBA4006F1136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH4AS5QT2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GRDBDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GRDBDemo;
+			};
+			name = Debug;
+		};
+		CEDEDE0C28DBEBA4006F1136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH4AS5QT2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GRDBDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GRDBDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDEDDD528DBEBA3006F1136 /* Build configuration list for PBXProject "GRDBDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDEDE0228DBEBA4006F1136 /* Debug */,
+				CEDEDE0328DBEBA4006F1136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDEDE0428DBEBA4006F1136 /* Build configuration list for PBXNativeTarget "GRDBDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDEDE0528DBEBA4006F1136 /* Debug */,
+				CEDEDE0628DBEBA4006F1136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDEDE0728DBEBA4006F1136 /* Build configuration list for PBXNativeTarget "GRDBDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDEDE0828DBEBA4006F1136 /* Debug */,
+				CEDEDE0928DBEBA4006F1136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDEDE0A28DBEBA4006F1136 /* Build configuration list for PBXNativeTarget "GRDBDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDEDE0B28DBEBA4006F1136 /* Debug */,
+				CEDEDE0C28DBEBA4006F1136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEDEDE0D28DBEBEB006F1136 /* XCRemoteSwiftPackageReference "RxGRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGRDB";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.0;
+			};
+		};
+		CEDEDE1B28DBED1F006F1136 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEDEDE0E28DBEBEB006F1136 /* RxGRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDEDE0D28DBEBEB006F1136 /* XCRemoteSwiftPackageReference "RxGRDB" */;
+			productName = RxGRDB;
+		};
+		CEDEDE1C28DBED1F006F1136 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDEDE1B28DBED1F006F1136 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		CEDEDE1E28DBED1F006F1136 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDEDE1B28DBED1F006F1136 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		CEDEDE2028DBED1F006F1136 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDEDE1B28DBED1F006F1136 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CEDEDDD228DBEBA3006F1136 /* Project object */;
+}
