@@ -1,20 +1,16 @@
 //
-//  Entitys.swift
-//  TestRxCoreData
+//  Associations.swift
+//  GRDBDemo
 //
-//  Created by Cheng-Hong on 2022/9/20.
+//  Created by Cheng-Hong on 2022/9/26.
 //
 
 import GRDB
 import RxGRDB
 import RxSwift
 
-enum DBError: Error {
-    case notSearch
-}
-
-/// Entitys is responsible for high-level operations on the Entitys database.
-struct Entitys {
+/// Associations is responsible for high-level operations on the Entitys database.
+struct Associations {
     private let dbWriter: DatabaseWriter
     
     init(dbWriter: DatabaseWriter) {
@@ -23,7 +19,7 @@ struct Entitys {
     
     // MARK: - Modify Entitys
     
-    func rx_insert(_ entity: Entity) -> Single<Void> {
+    func rx_insert(_ entity: Association) -> Single<Void> {
         dbWriter.rx.write(updates: { db in try _insert(db, entity: entity) })
     }
     
@@ -31,39 +27,22 @@ struct Entitys {
         dbWriter.rx.write(updates: _deleteAll)
     }
     
-    func rx_deleteOne(_ entity: Entity) -> Single<Void> {
+    func rx_deleteOne(_ entity: Association) -> Single<Void> {
         dbWriter.rx.write(updates: { db in try _deleteOne(db, entity: entity) })
-    }
-    
-    func rx_deleteOne(_ id: Int64) -> Single<Void> {
-        guard let entity = try? fetchAll().filter({ $0.id == id }).first else { return .error(DBError.notSearch) }
-        
-        return rx_deleteOne(entity)
-    }
-    
-    func rx_update(_ entity: Entity) -> Single<Void> {
-        dbWriter.rx.write(updates: { db in try _update(db, entity: entity) })
     }
     
     // MARK: - Access Entitys
     
-    func fetchAll() -> Observable<[Entity]> {
+    func fetchAll() -> Observable<[Association]> {
         ValueObservation
             .tracking(_fetchAll)
             .rx.observe(in: dbWriter)
     }
     
     /// An observable that tracks changes in the Entitys
-    func EntitysOrderedByScore() -> Observable<[Entity]> {
+    func EntitysOrderedByID() -> Observable<[Association]> {
         ValueObservation
-            .tracking(Entity.all().orderByID().fetchAll)
-            .rx.observe(in: dbWriter)
-    }
-    
-    /// An observable that tracks changes in the Entitys
-    func EntitysOrderedByName() -> Observable<[Entity]> {
-        ValueObservation
-            .tracking(Entity.all().orderByAttribute().fetchAll)
+            .tracking(Association.all().orderByID().fetchAll)
             .rx.observe(in: dbWriter)
     }
     
@@ -72,53 +51,45 @@ struct Entitys {
     // ⭐️ Good practice: when we want to update the database, we define methods
     // that accept a Database connection, because they can easily be composed.
     
-    private func _insert(_ db: Database, entity: Entity) throws {
+    private func _insert(_ db: Database, entity: Association) throws {
         try entity.insert(db)
     }
     
     private func _deleteAll(_ db: Database) throws {
-        try Entity.deleteAll(db)
+        try Association.deleteAll(db)
     }
     
-    private func _deleteOne(_ db: Database, entity: Entity) throws {
+    private func _deleteOne(_ db: Database, entity: Association) throws {
         try entity.delete(db)
     }
     
-    private func _update(_ db: Database, entity: Entity) throws {
+    private func _update(_ db: Database, entity: Association) throws {
         try entity.update(db)
     }
     
-    private func _fetchAll(_ db: Database) throws -> [Entity] {
-        try Entity.fetchAll(db)
+    private func _fetchAll(_ db: Database) throws -> [Association] {
+        try Association.fetchAll(db)
     }
 }
 
 // MARK: - Entity Database Requests
 
 // Define requests of entitys in a constrained extension to the DerivableRequest protocol.
-extension DerivableRequest where RowDecoder == Entity {
+extension DerivableRequest where RowDecoder == Association {
     func orderByID() -> Self {
-        return order(RowDecoder.Columns.id.desc, RowDecoder.Columns.attribute)
-    }
-    
-    func orderByAttribute() -> Self {
-        return order(RowDecoder.Columns.attribute, RowDecoder.Columns.id.desc)
-    }
-    
-    func filterAttribute(_ str: String) -> Self {
-        filter(Entity.Columns.attribute == str)
+        return order(RowDecoder.Columns.id.desc)
     }
 }
 
 // MARK: - For Swift
 
-extension Entitys {
+extension Associations {
     
     // MARK: - Modify Entitys
     
     /// 新增entity
     /// - Parameter entity: 實例
-    func insert(_ entity: Entity) throws {
+    func insert(_ entity: Association) throws {
         try dbWriter.write { db in try _insert(db, entity: entity) }
     }
     
@@ -129,13 +100,13 @@ extension Entitys {
     
     /// 刪除單個entity
     /// - Parameter entity: 實例
-    func deleteOne(_ entity: Entity) throws {
+    func deleteOne(_ entity: Association) throws {
         _ = try dbWriter.write { db in try _deleteOne(db, entity: entity) }
     }
     
     /// 更新entity
     /// - Parameter entity: 實例
-    func update(_ entity: Entity) throws {
+    func update(_ entity: Association) throws {
         try dbWriter.write { db in try _update(db, entity: entity)}
     }
     
@@ -143,7 +114,7 @@ extension Entitys {
     
     /// 讀取entity
     /// - Returns: 所有實例
-    func fetchAll() throws -> [Entity] {
+    func fetchAll() throws -> [Association] {
         try dbWriter.read(_fetchAll)
     }
 }

@@ -47,8 +47,27 @@ final class GRDBManager {
         }
         
         migrator.registerMigration("v2") { db in
-            try db.alter(table: Entity.databaseTableName) { t in
-                t.drop(column: Entity.Columns.attribute.name)
+            if #available(iOS 15.0, *) {
+                try db.alter(table: Entity.databaseTableName) { t in
+                    t.drop(column: Entity.Columns.attribute.name)
+                }
+            } else {
+                // Turn uuid into a text column
+                try db.create(table: "new_\(Entity.databaseTableName)") { t in
+                    t.autoIncrementedPrimaryKey(Entity.Columns.id.name)
+                }
+                
+                let rows = try Row.fetchCursor(db, sql: "SELECT * FROM \(Entity.databaseTableName)")
+                while let row = try rows.next() {
+                    try db.execute(
+                        sql: "INSERT INTO new_\(Entity.databaseTableName) (id) VALUES (?)",
+                        arguments: [
+                            row["id"]
+                        ])
+                }
+                
+                try db.drop(table: Entity.databaseTableName)
+                try db.rename(table: "new_\(Entity.databaseTableName)", to: Entity.databaseTableName)
             }
         }
         
@@ -98,15 +117,5 @@ final class GRDBManager {
             // Check the error message to determine what the actual problem was.
             fatalError("Unresolved error \(error)")
         }
-    }
-}
-
-extension GRDBManager {
-    /// Access to the players database
-//    func entitys() -> Entitys { Entitys(database: dbWriter) }
-    
-    /// Access to the players database
-    var entitys: Entitys {
-        Entitys(dbWriter: dbWriter)
     }
 }
