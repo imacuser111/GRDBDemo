@@ -40,7 +40,7 @@ struct Associations {
     }
     
     /// An observable that tracks changes in the Entitys
-    func EntitysOrderedByID() -> Observable<[Association]> {
+    func entitysOrderedByID() -> Observable<[Association]> {
         ValueObservation
             .tracking(Association.all().orderByID().fetchAll)
             .rx.observe(in: dbWriter)

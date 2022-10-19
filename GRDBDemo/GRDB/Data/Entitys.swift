@@ -47,21 +47,21 @@ struct Entitys {
     
     // MARK: - Access Entitys
     
-    func fetchAll() -> Observable<[Entity]> {
+    func rx_fetchAll() -> Observable<[Entity]> {
         ValueObservation
             .tracking(_fetchAll)
             .rx.observe(in: dbWriter)
     }
     
     /// An observable that tracks changes in the Entitys
-    func EntitysOrderedByScore() -> Observable<[Entity]> {
+    func entitysOrderedByScore() -> Observable<[Entity]> {
         ValueObservation
             .tracking(Entity.all().orderByID().fetchAll)
             .rx.observe(in: dbWriter)
     }
     
     /// An observable that tracks changes in the Entitys
-    func EntitysOrderedByName() -> Observable<[Entity]> {
+    func entitysOrderedByName() -> Observable<[Entity]> {
         ValueObservation
             .tracking(Entity.all().orderByAttribute().fetchAll)
             .rx.observe(in: dbWriter)

@@ -19,10 +19,10 @@ struct Association: Identifiable, Equatable {
     /// Int64 is the recommended type for auto-incremented database ids.
     /// Use nil for entitys that are not inserted yet in the database.
     var id: Int64?
-    var entityID: Int64?
+    var entityID: Int64
     
     /// Creates a new entity
-    static func new(id: Int64? = nil, entityID: Int64? = nil) -> Self {
+    static func new(id: Int64? = nil, entityID: Int64) -> Self {
         .init(id: id, entityID: entityID)
     }
 }
