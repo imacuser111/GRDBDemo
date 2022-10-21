@@ -36,12 +36,12 @@ class ViewController: UIViewController {
 //            // 4. Access the database
 //            try GRDBManager.shared.dbWriter
 //                .write { db in
-//                    try Entity(attribute: "22233333").insert(db)
+//                    try Entity(attribute: "Test 1111").insert(db)
 //                }
 //
 //            try GRDBManager.shared.dbWriter
 //                .write { db in
-//                    try Association(entityID: 3).insert(db)
+//                    try Association(entityID: 1).insert(db)
 //                }
 //
 //        } catch {
@@ -103,9 +103,9 @@ class ViewController: UIViewController {
 
         // MARK: - 讀取所有
         
-//        // 讀取所有entitys
+        // 讀取所有entitys
 //        GRDBManager.shared.entitys
-//            .fetchAll()
+//            .rx_fetchAll()
 //            .bind {
 //                print($0, 1111111)
 //            }
@@ -118,18 +118,22 @@ class ViewController: UIViewController {
 //                print($0, 22222)
 //            }
 //            .disposed(by: disposeBag)
-
-        
+ 
 //        // MARK: - 讀取關聯的資訊
 //
 //        // 讀取所有的AssociationInfo
 //        try? GRDBManager.shared.dbWriter
 //            .read { db in
 //                let request = Association.including(optional: Association.entity)
-//                let associationInfo = try AssociationInfo.fetchAll(db, request)
+//                let associationInfos = try AssociationInfo.fetchAll(db, request)
 //
-//                // po 第一個entity的associaitons
-//                print(associationInfo.first?.entity.associaitons, 111333)
+////                // 一樣結果
+////                let associationInfos = try Association
+////                    .including(required: Association.entity)
+////                    .asRequest(of: AssociationInfo.self)
+////                    .fetchAll(db)
+//
+//                print(associationInfos)
 //            }
         
 //        // MARK: - 讀取entity attribute == "22233333"的所有元素
@@ -147,6 +151,37 @@ class ViewController: UIViewController {
 //                print($0)
 //            }
 //            .disposed(by: disposeBag)
+        
+//        // MARK: - 過濾關聯
+//
+//        // 搜尋Entity attribute == "22233333"的Association
+//        let filterIDEntity = Association.entity.filter(Entity.Columns.attribute == "22233333")
+//
+//        let request = Association.joining(required: filterIDEntity)
+//
+//        // 搜尋Associations id == "1"的EntityWithAssociationsIsOne
+//        let entityRequest = Entity
+//            .including(all: Entity.associaitons
+//                .filter(Association.Columns.id == "1")
+//                .forKey("associationsIsOne"))
+//
+//        try? GRDBManager.shared.dbWriter
+//            .read { db in
+//
+//                let associations = try request.fetchAll(db)
+//
+//                let EntityInfo = try EntityWithAssociationsIsOne.fetchAll(db, entityRequest)
+//
+//                print(try Entity.fetchAll(db), associations, EntityInfo, separator: "\n")
+//            }
     }
 }
 
+//// TODO: - 過濾關聯
+//
+//// https://github.com/groue/GRDB.swift/blob/master/Documentation/AssociationsBasics.md#filtering-associations
+//struct EntityWithAssociationsIsOne: Decodable, FetchableRecord {
+//    var entity: Entity
+//    // 可以用來分類
+//    var associationsIsOne: [Association]
+//}
