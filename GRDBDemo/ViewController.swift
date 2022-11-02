@@ -113,7 +113,7 @@ class ViewController: UIViewController {
 //
 //        // 讀取所有associations
 //        GRDBManager.shared.associations
-//            .fetchAll()
+//            .rx_fetchAll()
 //            .bind {
 //                print($0, 22222)
 //            }

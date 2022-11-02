@@ -33,7 +33,7 @@ struct Associations {
     
     // MARK: - Access Entitys
     
-    func fetchAll() -> Observable<[Association]> {
+    func rx_fetchAll() -> Observable<[Association]> {
         ValueObservation
             .tracking(_fetchAll)
             .rx.observe(in: dbWriter)
