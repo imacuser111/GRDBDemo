@@ -19,7 +19,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // MARK: - 綁定變更時通知
+        // https://github.com/RxSwiftCommunity/RxGRDB#usage
         
+        // 觀察數據庫值的變化 (跟下面rx取得資料一樣)
+        GRDBManager.shared.entitys
+            .rx_fetchAll()
+            .bind {
+                print("最新的Entity: \($0)")
+            }
+            .disposed(by: disposeBag)
+        
+        // 觀察數據庫事務
         let observation = DatabaseRegionObservation(tracking: Entity.all())
         
         // notification(當Entity改變時)

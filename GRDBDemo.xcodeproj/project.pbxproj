@@ -103,8 +103,8 @@
 		CED662D528E14D6A00886B45 /* Associations */ = {
 			isa = PBXGroup;
 			children = (
-				CED662D628E1505900886B45 /* AssociationInfo.swift */,
 				CED662D828E1945C00886B45 /* EntityInfo.swift */,
+				CED662D628E1505900886B45 /* AssociationInfo.swift */,
 			);
 			path = Associations;
 			sourceTree = "<group>";

@@ -8,16 +8,10 @@
 import Foundation
 import GRDB
 
+// (2) 子表
 struct AssociationInfo: FetchableRecord, Decodable {
     let associaiton: Association
     let entity: Entity
-}
-
-extension Entity {
-    static let associaitons = hasMany(Association.self)
-    var associaitons: QueryInterfaceRequest<Association> {
-        request(for: Entity.associaitons)
-    }
 }
 
 extension Association {
@@ -27,6 +21,7 @@ extension Association {
 //    static let entity = belongsTo(Entity.self, using: entityForeignKey)
     
     static let entity = belongsTo(Entity.self)
+    
     var entity: QueryInterfaceRequest<Entity> {
         request(for: Association.entity)
     }
